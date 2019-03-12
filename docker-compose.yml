@@ -1,0 +1,36 @@
+version: '2'
+services:
+
+ phpservermonitor:
+    image: scavin/phpservermonitor
+    restart: always
+    networks:
+     - network
+    ports:
+     - 80:80
+
+ mysql:
+    image: mysql:5.7
+    environment:
+     - MYSQL_ROOT_PASSWORD=PASSWORD
+    networks:
+     - network
+    volumes:
+     - ./mysql/db-data:/var/lib/mysql
+    restart: always
+
+
+ phpmyadmin:
+    image: corbinu/docker-phpmyadmin
+    environment:
+     - MYSQL_USERNAME=root
+     - MYSQL_PASSWORD=PASSWORD
+     - MYSQL_PORT_3306_TCP_ADDR=mysql
+    ports:
+     - 81:80
+    networks:
+     - network
+
+networks:
+  network:
+   driver: bridge
