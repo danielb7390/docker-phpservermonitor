@@ -14,14 +14,22 @@ https://github.com/phpservermon/phpservermon
 
 ```docker-compose up -d```
 
+http://ip
+
+#### crontab config
+
+Edit file ```crontab```:
+
+```*/5 * * * * /usr/local/bin/php /var/www/html/cron/status.cron.php --timeout=310```
+
 #### Database configuration
 
 
 If you used my docker-compose.yml file you have to : 
 
-1 - Go on phpmyadmin : http://ip_of_your_server:81  (If you don't want to use phpmyadmin for security reasons you can just delete the container in my docker-compose.yml file and create your database with the command line from the container MySQL.)
-2 - Create a database : monitor (you can use another name)
-3 - Go on PhpServerMonitor : http://ip_of_your_server
+1. Go on phpmyadmin : http://ip_of_your_server:81  (If you don't want to use phpmyadmin for security reasons you can just delete the container in my docker-compose.yml file and create your database with the command line from the container MySQL.)
+2. Create a database : monitor (you can use another name)
+3. Go on PhpServerMonitor : http://ip_of_your_server
 
 ![](https://raw.githubusercontent.com/Quentinvarquet/docker-phpservermonitor/master/img/install.png)
 
