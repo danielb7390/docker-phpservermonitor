@@ -18,6 +18,7 @@ http://ip
 
 #### crontab config
 
+Default： 5 minutes and 10 seconds
 Edit file ```crontab```:
 
 ```*/5 * * * * /usr/local/bin/php /var/www/html/cron/status.cron.php --timeout=310```
