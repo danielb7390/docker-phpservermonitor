@@ -18,7 +18,7 @@ http://ip
 
 #### crontab config
 
-Default： 5 minutes and 10 seconds
+Default: 5 minutes and 10 seconds
 
 Edit file ```crontab```:
 
