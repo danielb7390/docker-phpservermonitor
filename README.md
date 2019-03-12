@@ -1,62 +1,18 @@
 
 # PHPServerMonitor in Docker (Last version 3.2.0)
 
-
-
 ### Last update : 03/11/2019 . Created repository with version 3.2.0
-#### Please open issues on [github](https://github.com/Quentinvarquet/docker-phpservermonitor/issues)
 
 
 ### PHPServerMonitor
 
 [PHPServerMonitor](http://www.phpservermonitor.org/) is a script that checks whether your websites and servers are up and running. It comes with a web based user interface where you can manage your services and websites, and you can manage users for each server with a mobile number and email address.
 
-### Docker
-
-[Docker](https://www.docker.com/) allows you to package an application with all of its dependencies into a standardized unit for software development.
-
-More information : 
-
-* [What is docker](https://www.docker.com/what-docker)
-* [How to Create a Docker Business Case](https://www.brianchristner.io/how-to-create-a-docker-business-case/)
-
-### Information
-
-This is the unofficial (updated when I can !) repository for PHPServerMonitor
-
-I will update the repository every time there is a new version of PHPServerMonitor available
-
-
-
-### Supported tags and respective Dockerfile links
-
-
-#### Example
-
-```bash
-docker run --name phpservermonitor -p 80:80 -d quentinv/phpservermonitor:latest
-```
-
-
-* **latest** : Last version of PHPServerMonitor
-
-#### Tags
-
-**For now, the only available tag is "latest"**
-
- [```latest```](https://github.com/Quentinvarquet/docker-phpservermonitor/blob/master/dockerfile/3.1.1/Dockerfile)
-
+https://github.com/phpservermon/phpservermon
 
 ### Docker Compose
 
-I created a docker-compose.yml with twi containers : PhpServerMonitor and MySQL
-
-
-#### Docker Compose files
-
-
-[```latest```](https://github.com/Quentinvarquet/docker-phpservermonitor/blob/master/docker-compose/phpservermonitor-3.1.1/docker-compose.yml)
-
+```docker-compose up -d```
 
 #### Database configuration
 
@@ -67,7 +23,7 @@ If you used my docker-compose.yml file you have to :
 2 - Create a database : monitor (you can use another name)
 3 - Go on PhpServerMonitor : http://ip_of_your_server
 
-![install](https://raw.githubusercontent.com/Quentinvarquet/docker-phpservermonitor/master/img/install.png)
+![](https://raw.githubusercontent.com/Quentinvarquet/docker-phpservermonitor/master/img/install.png)
 
 * **Database Host:** mysql_container_name
 * **Database Name:** monitor
