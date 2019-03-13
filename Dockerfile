@@ -14,16 +14,15 @@ RUN chmod +x /init.sh \
 EXPOSE 80
 EXPOSE 443
 
-ENV VERSION 3.3.2
-ENV PHPMONITOR_URL https://github.com/phpservermon/phpservermon/releases/download/v$VERSION/phpservermon-$VERSION.tar.gz
+ENV VERSION develop
+ENV PHPMONITOR_URL https://github.com/scavin/phpservermon.git
 
 RUN set -x \
     && cd /var/www/html \
     && rm -rf * \
     && cd /tmp \
-    && wget $PHPMONITOR_URL \
-    && tar -xvf phpservermon-$VERSION.tar.gz \
-    && cd phpservermon-$VERSION \
+    && git clone -b $VERSION $PHPMONITOR_URL \
+    && cd phpservermon \
     && mv * /var/www/html \
     && cd /var/www/html \
     && touch config.php \
