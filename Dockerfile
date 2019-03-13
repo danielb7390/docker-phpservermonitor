@@ -1,7 +1,7 @@
 FROM php:apache
 MAINTAINER Scavin <scavin@appinn.com>
 
-RUN apt-get update && apt-get -y install cron wget && apt-get clean && rm -rf /var/lib/apt/lists/*
+RUN apt-get update && apt-get -y install git cron wget && apt-get clean && rm -rf /var/lib/apt/lists/*
 RUN /usr/sbin/a2dismod 'mpm_*' && /usr/sbin/a2enmod mpm_prefork
 RUN docker-php-ext-install pdo pdo_mysql
 
