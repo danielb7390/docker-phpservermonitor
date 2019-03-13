@@ -2,8 +2,10 @@ version: '2'
 services:
 
  phpservermonitor:
-    image: scavin/phpservermonitor
+    image: scavin/phpservermonitor:3.3.2
     restart: always
+    depends_on:
+     - mysql
     networks:
      - network
     ports:
@@ -26,7 +28,9 @@ services:
      - MYSQL_USERNAME=root
      - MYSQL_PASSWORD=PASSWORD
      - MYSQL_PORT_3306_TCP_ADDR=mysql
-    ports:
+    depends_on:
+     - mysql
+     ports:
      - 81:80
     networks:
      - network
