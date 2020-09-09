@@ -2,7 +2,7 @@ version: '2'
 services:
 
  phpservermonitor:
-    image: scavin/phpservermonitor:3.3.2
+    image: scavin/phpservermonitor
     restart: always
     depends_on:
      - mysql
