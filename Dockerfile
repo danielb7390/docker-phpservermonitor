@@ -14,7 +14,7 @@ RUN chmod +x /init.sh \
 EXPOSE 80
 EXPOSE 443
 
-ENV VERSION 3.3.2
+ENV VERSION 3.5.2
 ENV PHPMONITOR_URL https://github.com/phpservermon/phpservermon/releases/download/v$VERSION/phpservermon-$VERSION.tar.gz
 
 RUN set -x \
