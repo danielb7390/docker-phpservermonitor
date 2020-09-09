@@ -12,6 +12,8 @@ https://github.com/phpservermon/phpservermon
 
 ### Docker Compose
 
+First create a local file named `config.php` and chown it to www-data `chown 33:33 config.php`
+
 ```docker-compose up -d```
 
 http://ip
