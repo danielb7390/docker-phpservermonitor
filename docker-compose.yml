@@ -6,8 +6,6 @@ services:
     restart: always
     depends_on:
      - mysql
-    networks:
-     - network
     ports:
      - 80:80
     volumes:
@@ -17,8 +15,6 @@ services:
     image: mysql:5.7
     environment:
      - MYSQL_ROOT_PASSWORD=PASSWORD
-    networks:
-     - network
     volumes:
      - ./mysql/db-data:/var/lib/mysql
     restart: always
@@ -34,9 +30,4 @@ services:
      - mysql
      ports:
      - 81:80
-    networks:
-     - network
 
-networks:
-  network:
-   driver: bridge
