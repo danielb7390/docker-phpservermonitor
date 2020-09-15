@@ -1,5 +1,4 @@
 FROM php:apache
-MAINTAINER Scavin <scavin@appinn.com>
 
 RUN apt-get update && apt-get -y install cron wget && apt-get clean && rm -rf /var/lib/apt/lists/*
 RUN /usr/sbin/a2dismod 'mpm_*' && /usr/sbin/a2enmod mpm_prefork
@@ -28,5 +27,5 @@ RUN set -x \
     && cd /var/www/html \
     && touch config.php \
     && chmod 0777 config.php
-    
+
 ENTRYPOINT ["/init.sh"]
