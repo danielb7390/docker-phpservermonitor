@@ -1,3 +1,8 @@
+**THIS DOCKER IMAGE IS ABANDONED.**  
+If you are looking for something similar, take a look at [Uptime Kuma](https://github.com/louislam/uptime-kuma)
+
+----
+
 This is a simple fork of https://github.com/scavin/docker-phpservermonitor, needed to edit the cron time to 1 minute
 
 # PHPServerMonitor in Docker
